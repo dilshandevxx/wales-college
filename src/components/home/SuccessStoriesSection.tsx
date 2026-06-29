@@ -5,7 +5,7 @@ const stories = [
   {
     client: 'Musi',
     headline: '$0 Ad Spend, 5M+ Reached Organically',
-    hasDot: false,
+    hasDot: true, // Added the missing yellow dot
     description: 'With over three million 5-star reviews on iOS, Musi has rapidly become one of the top music apps. By leveraging a purely organic social media strategy, Musi reached over 5 million users on social without any paid advertising.',
     bgImage: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2874&auto=format&fit=crop', // orange/music vibe placeholder
     tags: [
@@ -77,18 +77,24 @@ export function SuccessStoriesSection() {
         <div className="absolute top-0 left-0 w-[clamp(4rem,8vw,8rem)] h-[clamp(4rem,8vw,8rem)] rounded-full border border-white/10 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
         {/* Section Header */}
-        <div className="flex justify-center items-center mb-[clamp(3rem,6vw,6rem)] pt-[clamp(2rem,4vw,4rem)]">
+        <div className="flex justify-center items-center mb-[clamp(3rem,6vw,6rem)] pt-[clamp(2rem,4vw,4rem)] relative z-10">
           <h2 className="text-[clamp(3rem,6vw,6rem)] font-bold tracking-tighter flex items-center gap-[clamp(0.5rem,1.5vw,1.5rem)] text-white">
             Success
             <span className="flex items-center text-[clamp(1rem,2vw,2rem)] font-light text-white/50 tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/10">
-              ( <span className="font-bold text-white text-[clamp(0.6rem,1vw,1rem)] mx-1">TOYOTA</span> )
+              (
+               {/* Bacardi logo mockup */}
+               <div className="flex flex-col items-center mx-2 opacity-80">
+                 <div className="w-4 h-4 rounded-full bg-white/20 mb-0.5" />
+                 <span className="font-bold text-white text-[clamp(0.5rem,0.8vw,0.75rem)] leading-none tracking-widest uppercase">BACARDÍ</span>
+               </div>
+              )
             </span>
             Stories
           </h2>
         </div>
 
         {/* Case Studies List */}
-        <div className="flex flex-col gap-[clamp(1.5rem,4vw,4rem)]">
+        <div className="flex flex-col gap-[clamp(1.5rem,4vw,4rem)] relative z-10">
           {stories.map((story, idx) => (
             <div 
               key={idx} 
@@ -108,7 +114,12 @@ export function SuccessStoriesSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/50 via-transparent to-transparent md:hidden" />
                 
                 {/* Card Content */}
-                <div className="relative z-10 flex flex-col justify-center h-full w-full max-w-4xl p-[clamp(2rem,5vw,6rem)]">
+                <div className="relative z-10 flex flex-col justify-center h-full w-full max-w-4xl p-[clamp(2rem,5vw,6rem)] pt-[clamp(4rem,8vw,10rem)]">
+                  
+                  {/* Decorative circle on the first card */}
+                  {idx === 0 && (
+                    <div className="absolute top-[clamp(2rem,4vw,4rem)] left-[clamp(2rem,5vw,6rem)] w-[clamp(3rem,5vw,4rem)] h-[clamp(3rem,5vw,4rem)] rounded-full border border-white/20 pointer-events-none" />
+                  )}
                   
                   {/* Top Tag */}
                   <div className="flex items-center gap-3 mb-[clamp(1.5rem,3vw,2rem)]">
