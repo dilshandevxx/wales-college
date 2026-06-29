@@ -1,6 +1,8 @@
 import { Hero } from '@/components/hero/Hero';
 import { StatementSection } from '@/components/home/StatementSection';
 import { StatsSection } from '@/components/home/StatsSection';
+import { RecentClientsSection } from '@/components/home/RecentClientsSection';
+import { ServicesSection } from '@/components/home/ServicesSection';
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Hero />
       <StatementSection />
       <StatsSection />
+      <RecentClientsSection />
+      <ServicesSection />
     </main>
   );
 }
