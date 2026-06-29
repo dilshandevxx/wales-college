@@ -101,7 +101,7 @@ export function SuccessStoriesSection() {
               className="relative w-full overflow-hidden bg-zinc-900 group"
             >
               {/* Aspect Ratio Container (scales dynamically) */}
-              <div className="relative w-full h-[600px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+              <div className="relative w-full flex flex-col min-h-[550px] h-auto md:h-[500px] lg:h-[600px] xl:h-[700px]">
                 
                 {/* Background Image */}
                 <div 
@@ -110,11 +110,12 @@ export function SuccessStoriesSection() {
                 />
                 
                 {/* Dark Gradient Overlay for readability (left heavy) */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/70 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/50 via-transparent to-transparent md:hidden" />
+                <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/70 to-transparent" />
+                <div className="absolute inset-0 bg-[#050505]/60 md:hidden" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent md:hidden" />
                 
                 {/* Card Content */}
-                <div className="relative z-10 flex flex-col justify-center h-full w-full max-w-4xl p-[clamp(2rem,5vw,6rem)] pt-[clamp(4rem,8vw,10rem)]">
+                <div className="relative z-10 flex flex-col justify-end md:justify-center h-full w-full max-w-4xl p-[clamp(1.5rem,5vw,6rem)] pt-[clamp(3rem,8vw,10rem)] pb-8 md:pb-[clamp(2rem,5vw,6rem)]">
                   
                   {/* Decorative circle on the first card */}
                   {idx === 0 && (

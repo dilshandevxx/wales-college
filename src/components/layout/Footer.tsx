@@ -75,7 +75,7 @@ export function Footer() {
         
         {/* Giant Text */}
         <div className="w-full mb-12 flex justify-start">
-          <h1 className="text-[clamp(4rem,10vw,12rem)] font-bold tracking-tighter leading-none text-white whitespace-nowrap">
+          <h1 className="text-[clamp(4rem,10vw,12rem)] font-bold tracking-tighter leading-[0.9] text-white break-words w-full">
             Get in contact
           </h1>
         </div>
