@@ -98,7 +98,7 @@ export function SuccessStoriesSection() {
           {stories.map((story, idx) => (
             <div 
               key={idx} 
-              className="relative w-full overflow-hidden rounded-[clamp(1rem,2vw,2rem)] bg-zinc-900 group"
+              className="relative w-full overflow-hidden bg-zinc-900 group"
             >
               {/* Aspect Ratio Container (scales dynamically) */}
               <div className="relative w-full h-[600px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
